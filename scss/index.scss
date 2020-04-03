@@ -1,16 +1,24 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 /* Variables */
-$background-secondary--dark: #292929;
-$background-primary--dark: #1A1A1A;
-$text-primary--dark: #ffffff;
+:root {
+  --background-primary: #1A1A1A;
+  --background-secondary: #292929;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d1d1;
+}
 $tertiary-color: #f9a83a;
 $font-primary: 'Inter', sans-serif;
 /* Styling */
 body {
-  background: $background-primary--dark;
+  background: var(--background-primary);
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
 }
 
 .navbar-bg {
@@ -21,7 +29,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background: $background-secondary--dark;
+  background: var(--background-secondary);
 
   .navbar-frame {
     display: flex;
@@ -41,6 +49,12 @@ body {
       bottom: 0;
       height: 30px;
       width: auto;
+      transition: 0.3s;
+    }
+
+    .navbar-logo:hover {
+      height: 32px;
+      transition: 0.3s;
     }
 
     .navlinks {
@@ -55,7 +69,7 @@ body {
       left: 20px;
 
       .link {
-        color: $text-primary--dark;
+        color: var(--text-primary);
         text-decoration: none;
         font-family: $font-primary;
         font-style: normal;
@@ -75,7 +89,7 @@ body {
     }
 
     .nav-icons {
-      color: $text-primary--dark;
+      color: var(--text-primary);
       position: absolute;
       right: 90px;
       top: 1px;
@@ -113,8 +127,8 @@ body {
   left: 0;
   height: 70px;
   width: 190px;
-  background: #232323;
-  box-shadow: 0 0 28px rgba(0, 0, 0, 0.25);
+  background: var(--background-secondary);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 
   .feather {
@@ -126,7 +140,7 @@ body {
   }
 
   .text {
-    color: $text-primary--dark;
+    color: var(--text-primary);
     float: right;
     padding-top: 12px;
     margin-right: 20px;
@@ -146,7 +160,7 @@ body {
   position: relative;
 
   .switcher {
-    color: white;
+    color: var(--text-secondary);
     font-family: $font-primary;
     font-size: 16px;
     text-decoration: none;
