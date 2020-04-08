@@ -1,5 +1,25 @@
 {
+  "name": "scratch-client-4",
+  "description": "SC4's user-side, written in pure HTML, CSS, and Javascript",
+  "version": "0.1.2",
+  "main": "dist/index.html",
+  "dependencies": {},
   "devDependencies": {
+    "parcel": "^1.12.4",
     "sass": "^1.26.3"
-  }
+  },
+  "scripts": {
+    "serve": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scratch-Client-4/client.git"
+  },
+  "author": "SC4 Team",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Scratch-Client-4/client/issues"
+  },
+  "homepage": "https://github.com/Scratch-Client-4/client#readme"
 }
