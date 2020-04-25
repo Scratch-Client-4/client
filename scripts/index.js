@@ -1,37 +1,25 @@
-localStorage.setItem("visited", "true");
 let root = document.documentElement;
-document.getElementById("darkmodeToggle").addEventListener("click", function() {
+document.querySelector(".js-dark-mode-toggle").addEventListener("click", function() {
   darkmodeToggle();
 });
 
 function darkmodeToggle() {
-  if (localStorage.getItem("mode") == "dark") {
-    root.style.setProperty('--background-secondary', '#4d97ff');
-    root.style.setProperty('--background-primary', '#ffffff');
-    root.style.setProperty('--text-primary', '#ffffff');
-    root.style.setProperty('--text-secondary', '#292929');
-    localStorage.setItem("mode", "light");
-  } else {
-    root.style.setProperty('--background-secondary', '#292929');
-    root.style.setProperty('--background-primary', '#1A1A1A');
-    root.style.setProperty('--text-primary', '#ffffff');
-    root.style.setProperty('--text-secondary', '#d1d1d1');
+  root.classList.toggle("theme--dark");
+  if (root.classList.contains("theme--dark")) {
     localStorage.setItem("mode", "dark");
+  }
+  else {
+    localStorage.setItem("mode", "light");
   }
 }
 
 if (localStorage.getItem("visited") == "true") {
-  if (localStorage.getItem("mode") == "dark") {
-    root.style.setProperty('--background-secondary', '#4d97ff');
-    root.style.setProperty('--background-primary', '#ffffff');
-    root.style.setProperty('--text-primary', '#ffffff');
-    root.style.setProperty('--text-secondary', '#292929');
-  } else {
-    root.style.setProperty('--background-secondary', '#292929');
-    root.style.setProperty('--background-primary', '#1A1A1A');
-    root.style.setProperty('--text-primary', '#ffffff');
-    root.style.setProperty('--text-secondary', '#d1d1d1');
+  // The theme--dark class being already p^resent on tbe html page,
+  // we remove it if chosen theme is light.
+  if (localStorage.getItem("mode") == "light") {
+    root.classList.remove("theme--dark");
   }
 } else {
-  localStorage.setItem("mode", "dark");
+  localStorage.setItem("visited", "true");
+  localStorage.setItem("mode", "dark");Ò
 }

@@ -5,8 +5,8 @@
   "main": "dist/index.html",
   "dependencies": {},
   "devDependencies": {
-    "parcel": "^1.12.4",
-    "sass": "^1.26.3"
+    "less": "^3.11.1",
+    "parcel": "^1.12.4"
   },
   "scripts": {
     "serve": "parcel index.html",
