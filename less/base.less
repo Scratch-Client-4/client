@@ -1,0 +1,50 @@
+/* Fonts */
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');*/
+
+/* CSS Variables */
+:root {
+  --font-primary: "Inter", sans-serif;
+  --tertiary-color: #f9a83a;
+
+  --background-primary--light: #ffffff;
+  --background-secondary--light: #4d97ff;
+  --text-primary--light: #ffffff;
+  --text-secondary--light: #292929;
+
+  --background-primary--dark: #1A1A1A;
+  --background-secondary--dark: #292929;
+  --text-primary--dark: #ffffff;
+  --text-secondary--dark: #d1d1d1;
+}
+
+:root {
+  --background-primary: var(--background-primary--light);
+  --background-secondary: var(--background-secondary--light);
+  --text-primary: var(--text-primary--light);
+  --text-secondary: var(--text-secondary-light);
+}
+
+:root.theme--dark {
+  --background-primary: var(--background-primary--dark);
+  --background-secondary: var(--background-secondary--dark);
+  --text-primary: var(--text-primary--dark);
+  --text-secondary: var(--text-secondary-dark);
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  max-width: 100vw;
+  background: var(--background-primary);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.main {
+  margin-right: 50px;
+  margin-left: 50px;
+}
