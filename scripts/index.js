@@ -21,5 +21,5 @@ if (localStorage.getItem("visited") == "true") {
   }
 } else {
   localStorage.setItem("visited", "true");
-  localStorage.setItem("mode", "dark");Ò
+  localStorage.setItem("mode", "dark");
 }
