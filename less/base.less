@@ -3,13 +3,15 @@
 
 /* CSS Variables */
 :root {
-  --font-primary: "Inter", sans-serif;
-  --tertiary-color: #f9a83a;
+  --font-main: "Inter", sans-serif;
+
+  --primary-color: #4d97ff;
+  --accent-color: #f9a83a;
 
   --background-primary--light: #ffffff;
-  --background-secondary--light: #4d97ff;
-  --text-primary--light: #ffffff;
-  --text-secondary--light: #292929;
+  --background-secondary--light: #d1d1d1;
+  --text-primary--light: #000000;
+  --text-secondary--light: #7C7C7C;
 
   --background-primary--dark: #1A1A1A;
   --background-secondary--dark: #292929;
@@ -20,6 +22,8 @@
 :root {
   --background-primary: var(--background-primary--light);
   --background-secondary: var(--background-secondary--light);
+  // background--accent is used for things like the navbar
+  --background-accent: var(--primary-color);
   --text-primary: var(--text-primary--light);
   --text-secondary: var(--text-secondary-light);
 }
@@ -27,24 +31,31 @@
 :root.theme--dark {
   --background-primary: var(--background-primary--dark);
   --background-secondary: var(--background-secondary--dark);
+  --background-accent: var(--background-secondary);
   --text-primary: var(--text-primary--dark);
   --text-secondary: var(--text-secondary-dark);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: var(--font-primary);
-  font-size: 15px;
+  padding: 0;
+  margin: 0;
   max-width: 100vw;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: var(--text-primary);
   background: var(--background-primary);
   overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: var(--text-primary);
+  color: inherit;
 }
 
-.main {
-  margin-right: 50px;
-  margin-left: 50px;
+main {
+  margin: 50px;
 }

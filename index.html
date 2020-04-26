@@ -9,34 +9,33 @@
 </head>
 
 <body>
-  <nav class="navbar-bg">
-    <div class="navbar-frame">
-      <a href="https://scratch.mit.edu/"><img class="navbar-logo" src="assets/scratch.png"></a>
-      <div class="navlinks">
-        <a href="#" class="link">Explore</a>
-        <a href="#" class="link">Ideas</a>
-      </div>
-      <div class="nav-icons">
-        <a href="#" class="js-dark-mode-toggle"><i class="feather icon-moon"></i></a>
-        <a href="#"><i class="feather icon-folder"></i></a>
-        <a href="#"><i class="feather icon-message-square"></i></a>
-        <a href="#"><i class="feather icon-plus-square"></i></a>
-      </div>
+  <nav class="navbar">
+    <a href="https://scratch.mit.edu/">
+      <img class="navbar__logo" src="/assets/scratch.png">
+    </a>
+    <div class="navbar__menu">
+      <a href="#" class="navbar__link">Explore</a>
+      <a href="#" class="navbar__link">Ideas</a>
+    </div>
+    <div class="navbar__user-links">
+      <a href="#" class="js-dark-mode-toggle"><i class="feather icon-moon"></i></a>
+      <a href="#"><i class="feather icon-folder"></i></a>
+      <a href="#"><i class="feather icon-message-square"></i></a>
+      <a href="#"><i class="feather icon-plus-square"></i></a>
     </div>
   </nav>
-  <div class="main">
-    <div class="top-grid">
-      <div class="signedin">
+  <main>
+    <div class="accountbar">
+      <div class="accountbar__signedin">
         <i class="feather icon-user-x"></i>
-        <div class="text">
+        <div class="accountbar__signedin-info">
           You're not signed in.
         </div>
       </div>
+      <a href="#" class="account-switcher">Switch Accounts <i class="feather icon-chevron-down"></i></a>
     </div>
-    <div class="account-switcher">
-      <a href="#" class="switcher">Switch Accounts <i class="feather icon-chevron-down"></i></a>
-    </div>
-  </div>
+  </main>
   <script src="/scripts/index.js"></script>
 </body>
+
 </html>
