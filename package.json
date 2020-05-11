@@ -3,7 +3,9 @@
   "description": "SC4's user-side, written in pure HTML, CSS, and Javascript",
   "version": "0.1.2",
   "main": "dist/index.html",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
     "less": "^3.11.1",
     "parcel": "^1.12.4"

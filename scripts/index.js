@@ -1,4 +1,13 @@
-let root = document.documentElement;
+import Vue from "vue";
+
+var app = new Vue({
+  el: "#app",
+  data: {
+    message: "hey"
+  }
+});
+
+/* let root = document.documentElement;
 document.querySelector(".js-dark-mode-toggle").addEventListener("click", function() {
   darkmodeToggle();
 });
@@ -22,4 +31,4 @@ if (localStorage.getItem("visited") == "true") {
 } else {
   localStorage.setItem("visited", "true");
   localStorage.setItem("mode", "dark");
-}
+} */
